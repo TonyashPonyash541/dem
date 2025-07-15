@@ -1,0 +1,308 @@
+nav {
+    margin: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 15px; /* Отступы внутри квадрата */
+    background-color: #4EB543; /* Зелёный фон */
+    color: #FFFFFF; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Скругление углов */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+}
+
+nav ul li a:hover {
+    background-color: #4eb543cc; /* Затемнение при наведении */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.block {
+    background-color: #4EB543;
+    color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 300px; /* минимальная ширина 300px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.block h2 {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.members {
+    display: flex;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Добавлена анимация */
+}
+
+.member {
+    background-color: #4EB543;
+    color: #FFFFFF;
+    border-radius: 8px; /* Уберите округлость */
+    padding: 15px;
+    flex: 0 1 150px; /* фиксированная ширина для члена парламента */
+    text-align: center;
+}
+
+.member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Уберите округлость */
+}
+
+footer {
+    background: #302683;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+.carousel { 
+    position: relative; 
+    width: 100%; 
+    overflow: hidden; 
+} 
+.members { 
+    display: flex; 
+    transition: transform 0.5s ease; 
+} 
+.member { 
+    min-width: 300px; 
+    text-align: center; 
+    margin: 0 10px; 
+} 
+.button { 
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: white; 
+    border: none; 
+    cursor: pointer; 
+    z-index: 10; 
+} 
+.prev { 
+    left: 10px; 
+    top: 40%; 
+} 
+.next { 
+    right: 10px; 
+    top: 40%; 
+} 
+
+
+.contact-card {
+    background: linear-gradient(145deg, #302683, #3a1f9e);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 25px 0;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    pointer-events: none;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+  }
+  
+  .contact-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #4EB543;
+    border-radius: 3px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+  
+  .contact-text {
+    flex: 1;
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  
+  .telegram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background: rgba(78, 181, 67, 0.2);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border: 1px solid rgba(78, 181, 67, 0.3);
+  }
+  
+  .telegram-link:hover {
+    background: rgba(78, 181, 67, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .telegram-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Подвал - современный дизайн */
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #1a1a4a, #302683);
+    color: #ffffff;
+    margin-top: 50px;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95em;
+  }
+  
+  .footer-link:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Адаптивные стили */
+  @media (max-width: 768px) {
+    .contact-card {
+      padding: 20px;
+      margin: 20px 10px;
+    }
+    
+    .contact-card h2 {
+      font-size: 1.6em;
+    }
+    
+    .footer-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .footer-link {
+      padding: 5px 0;
+    }
+  }
